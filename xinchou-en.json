@@ -1,0 +1,1214 @@
+[
+  {
+    "country": "Argentina",
+    "Aggregation operation": "Median",
+    "year": 2023,
+    "age": 6.25
+  },
+  {
+    "country": "Argentina",
+    "Aggregation operation": "Median",
+    "year": 2022,
+    "age": 6.666666667
+  },
+  {
+    "country": "Argentina",
+    "Aggregation operation": "Median",
+    "year": 2021,
+    "age": 6.25
+  },
+  {
+    "country": "Argentina",
+    "Aggregation operation": "Median",
+    "year": 2020,
+    "age": 6.25
+  },
+  {
+    "country": "Argentina",
+    "Aggregation operation": "Median",
+    "year": 2019,
+    "age": 12.0
+  },
+  {
+    "country": "Argentina",
+    "Aggregation operation": "Median",
+    "year": 2018,
+    "age": 11.11111111
+  },
+  {
+    "country": "Argentina",
+    "Aggregation operation": "Median",
+    "year": 2017,
+    "age": 7.857142857
+  },
+  {
+    "country": "Australia",
+    "Aggregation operation": "Median",
+    "year": 2023,
+    "age": 11.34751773
+  },
+  {
+    "country": "Australia",
+    "Aggregation operation": "Median",
+    "year": 2022,
+    "age": 9.875
+  },
+  {
+    "country": "Australia",
+    "Aggregation operation": "Median",
+    "year": 2021,
+    "age": 10.47024531
+  },
+  {
+    "country": "Australia",
+    "Aggregation operation": "Median",
+    "year": 2020,
+    "age": 10.53333333
+  },
+  {
+    "country": "Australia",
+    "Aggregation operation": "Median",
+    "year": 2019,
+    "age": 15.31165312
+  },
+  {
+    "country": "Australia",
+    "Aggregation operation": "Median",
+    "year": 2018,
+    "age": 13.44856744
+  },
+  {
+    "country": "Australia",
+    "Aggregation operation": "Median",
+    "year": 2017,
+    "age": 13.00094822
+  },
+  {
+    "country": "Australia",
+    "Aggregation operation": "Median",
+    "year": 2016,
+    "age": 13.72843211
+  },
+  {
+    "country": "Australia",
+    "Aggregation operation": "Median",
+    "year": 2015,
+    "age": 13.30769231
+  },
+  {
+    "country": "Australia",
+    "Aggregation operation": "Median",
+    "year": 2014,
+    "age": 15.77335375
+  },
+  {
+    "country": "Australia",
+    "Aggregation operation": "Median",
+    "year": 2013,
+    "age": 18.0
+  },
+  {
+    "country": "Australia",
+    "Aggregation operation": "Median",
+    "year": 2012,
+    "age": 13.75
+  },
+  {
+    "country": "Australia",
+    "Aggregation operation": "Median",
+    "year": 2011,
+    "age": 15.96638656
+  },
+  {
+    "country": "Australia",
+    "Aggregation operation": "Median",
+    "year": 2010,
+    "age": 14.04293381
+  },
+  {
+    "country": "Australia",
+    "Aggregation operation": "Median",
+    "year": 2009,
+    "age": 16.36363636
+  },
+  {
+    "country": "Australia",
+    "Aggregation operation": "Median",
+    "year": 2008,
+    "age": 11.93737769
+  },
+  {
+    "country": "Australia",
+    "Aggregation operation": "Median",
+    "year": 2007,
+    "age": 15.4
+  },
+  {
+    "country": "Australia",
+    "Aggregation operation": "Median",
+    "year": 2006,
+    "age": 16.66666667
+  },
+  {
+    "country": "Australia",
+    "Aggregation operation": "Median",
+    "year": 2005,
+    "age": 15.77777778
+  },
+  {
+    "country": "Canada",
+    "Aggregation operation": "Median",
+    "year": 2023,
+    "age": 16.13636364
+  },
+  {
+    "country": "Canada",
+    "Aggregation operation": "Median",
+    "year": 2022,
+    "age": 17.14285714
+  },
+  {
+    "country": "Canada",
+    "Aggregation operation": "Median",
+    "year": 2021,
+    "age": 16.66666667
+  },
+  {
+    "country": "Canada",
+    "Aggregation operation": "Median",
+    "year": 2020,
+    "age": 17.57290529
+  },
+  {
+    "country": "Canada",
+    "Aggregation operation": "Median",
+    "year": 2019,
+    "age": 18.64645753
+  },
+  {
+    "country": "Canada",
+    "Aggregation operation": "Median",
+    "year": 2018,
+    "age": 18.44322344
+  },
+  {
+    "country": "Canada",
+    "Aggregation operation": "Median",
+    "year": 2017,
+    "age": 18.75580316
+  },
+  {
+    "country": "Canada",
+    "Aggregation operation": "Median",
+    "year": 2016,
+    "age": 18.19213313
+  },
+  {
+    "country": "Canada",
+    "Aggregation operation": "Median",
+    "year": 2015,
+    "age": 18.65384615
+  },
+  {
+    "country": "Canada",
+    "Aggregation operation": "Median",
+    "year": 2014,
+    "age": 17.58241758
+  },
+  {
+    "country": "Canada",
+    "Aggregation operation": "Median",
+    "year": 2013,
+    "age": 20.0
+  },
+  {
+    "country": "Canada",
+    "Aggregation operation": "Median",
+    "year": 2012,
+    "age": 20.15966047
+  },
+  {
+    "country": "Canada",
+    "Aggregation operation": "Median",
+    "year": 2011,
+    "age": 19.875
+  },
+  {
+    "country": "Canada",
+    "Aggregation operation": "Median",
+    "year": 2010,
+    "age": 20.16806723
+  },
+  {
+    "country": "Canada",
+    "Aggregation operation": "Median",
+    "year": 2009,
+    "age": 19.99566724
+  },
+  {
+    "country": "Canada",
+    "Aggregation operation": "Median",
+    "year": 2008,
+    "age": 20.68156425
+  },
+  {
+    "country": "Canada",
+    "Aggregation operation": "Median",
+    "year": 2007,
+    "age": 21.71752196
+  },
+  {
+    "country": "Canada",
+    "Aggregation operation": "Median",
+    "year": 2006,
+    "age": 21.47836539
+  },
+  {
+    "country": "Canada",
+    "Aggregation operation": "Median",
+    "year": 2005,
+    "age": 21.25
+  },
+  {
+    "country": "Denmark",
+    "Aggregation operation": "Median",
+    "year": 2022,
+    "age": 5.837088593
+  },
+  {
+    "country": "Denmark",
+    "Aggregation operation": "Median",
+    "year": 2021,
+    "age": 5.576082634
+  },
+  {
+    "country": "Denmark",
+    "Aggregation operation": "Median",
+    "year": 2020,
+    "age": 4.994399738
+  },
+  {
+    "country": "Denmark",
+    "Aggregation operation": "Median",
+    "year": 2019,
+    "age": 5.059215628
+  },
+  {
+    "country": "Denmark",
+    "Aggregation operation": "Median",
+    "year": 2018,
+    "age": 4.863206011
+  },
+  {
+    "country": "Denmark",
+    "Aggregation operation": "Median",
+    "year": 2017,
+    "age": 5.296691966
+  },
+  {
+    "country": "Denmark",
+    "Aggregation operation": "Median",
+    "year": 2016,
+    "age": 5.732628037
+  },
+  {
+    "country": "Denmark",
+    "Aggregation operation": "Median",
+    "year": 2015,
+    "age": 5.836048112
+  },
+  {
+    "country": "Denmark",
+    "Aggregation operation": "Median",
+    "year": 2014,
+    "age": 6.323865696
+  },
+  {
+    "country": "Denmark",
+    "Aggregation operation": "Median",
+    "year": 2013,
+    "age": 6.768911942
+  },
+  {
+    "country": "Denmark",
+    "Aggregation operation": "Median",
+    "year": 2012,
+    "age": 6.999844875
+  },
+  {
+    "country": "Denmark",
+    "Aggregation operation": "Median",
+    "year": 2011,
+    "age": 7.947197254
+  },
+  {
+    "country": "Denmark",
+    "Aggregation operation": "Median",
+    "year": 2010,
+    "age": 8.895098479
+  },
+  {
+    "country": "Denmark",
+    "Aggregation operation": "Median",
+    "year": 2009,
+    "age": 10.17200506
+  },
+  {
+    "country": "Denmark",
+    "Aggregation operation": "Median",
+    "year": 2008,
+    "age": 10.18354904
+  },
+  {
+    "country": "Denmark",
+    "Aggregation operation": "Median",
+    "year": 2007,
+    "age": 9.85029795
+  },
+  {
+    "country": "Denmark",
+    "Aggregation operation": "Median",
+    "year": 2006,
+    "age": 10.17206126
+  },
+  {
+    "country": "Denmark",
+    "Aggregation operation": "Median",
+    "year": 2005,
+    "age": 10.16733044
+  },
+  {
+    "country": "Germany",
+    "Aggregation operation": "Median",
+    "year": 2023,
+    "age": 14.24533444
+  },
+  {
+    "country": "Germany",
+    "Aggregation operation": "Median",
+    "year": 2022,
+    "age": 14.38013219
+  },
+  {
+    "country": "Germany",
+    "Aggregation operation": "Median",
+    "year": 2021,
+    "age": 13.47505423
+  },
+  {
+    "country": "Germany",
+    "Aggregation operation": "Median",
+    "year": 2020,
+    "age": 12.06257347
+  },
+  {
+    "country": "Germany",
+    "Aggregation operation": "Median",
+    "year": 2019,
+    "age": 14.35185185
+  },
+  {
+    "country": "Germany",
+    "Aggregation operation": "Median",
+    "year": 2018,
+    "age": 15.71428571
+  },
+  {
+    "country": "Germany",
+    "Aggregation operation": "Median",
+    "year": 2017,
+    "age": 14.4278607
+  },
+  {
+    "country": "Germany",
+    "Aggregation operation": "Median",
+    "year": 2016,
+    "age": 15.51071879
+  },
+  {
+    "country": "Germany",
+    "Aggregation operation": "Median",
+    "year": 2015,
+    "age": 15.81632653
+  },
+  {
+    "country": "Germany",
+    "Aggregation operation": "Median",
+    "year": 2014,
+    "age": 17.1875
+  },
+  {
+    "country": "Germany",
+    "Aggregation operation": "Median",
+    "year": 2013,
+    "age": 14.32328767
+  },
+  {
+    "country": "Germany",
+    "Aggregation operation": "Median",
+    "year": 2012,
+    "age": 16.30434783
+  },
+  {
+    "country": "Germany",
+    "Aggregation operation": "Median",
+    "year": 2011,
+    "age": 16.94444444
+  },
+  {
+    "country": "Germany",
+    "Aggregation operation": "Median",
+    "year": 2010,
+    "age": 16.69471558
+  },
+  {
+    "country": "Germany",
+    "Aggregation operation": "Median",
+    "year": 2009,
+    "age": 16.95859873
+  },
+  {
+    "country": "Germany",
+    "Aggregation operation": "Median",
+    "year": 2008,
+    "age": 16.95906433
+  },
+  {
+    "country": "Germany",
+    "Aggregation operation": "Median",
+    "year": 2007,
+    "age": 16.95906433
+  },
+  {
+    "country": "Germany",
+    "Aggregation operation": "Median",
+    "year": 2006,
+    "age": 18.542522
+  },
+  {
+    "country": "Germany",
+    "Aggregation operation": "Median",
+    "year": 2005,
+    "age": 16.81415929
+  },
+  {
+    "country": "India",
+    "Aggregation operation": "Median",
+    "year": 2023,
+    "age": 33.33333333
+  },
+  {
+    "country": "India",
+    "Aggregation operation": "Median",
+    "year": 2022,
+    "age": 28.57142857
+  },
+  {
+    "country": "India",
+    "Aggregation operation": "Median",
+    "year": 2021,
+    "age": 34.61538462
+  },
+  {
+    "country": "India",
+    "Aggregation operation": "Median",
+    "year": 2020,
+    "age": 29.16666667
+  },
+  {
+    "country": "India",
+    "Aggregation operation": "Median",
+    "year": 2019,
+    "age": 33.33333333
+  },
+  {
+    "country": "India",
+    "Aggregation operation": "Median",
+    "year": 2018,
+    "age": 34.7826087
+  },
+  {
+    "country": "Japan",
+    "Aggregation operation": "Median",
+    "year": 2023,
+    "age": 22.04213938
+  },
+  {
+    "country": "Japan",
+    "Aggregation operation": "Median",
+    "year": 2022,
+    "age": 21.34794157
+  },
+  {
+    "country": "Japan",
+    "Aggregation operation": "Median",
+    "year": 2021,
+    "age": 22.11376641
+  },
+  {
+    "country": "Japan",
+    "Aggregation operation": "Median",
+    "year": 2020,
+    "age": 22.51856854
+  },
+  {
+    "country": "Japan",
+    "Aggregation operation": "Median",
+    "year": 2019,
+    "age": 23.48001344
+  },
+  {
+    "country": "Japan",
+    "Aggregation operation": "Median",
+    "year": 2018,
+    "age": 23.53736896
+  },
+  {
+    "country": "Japan",
+    "Aggregation operation": "Median",
+    "year": 2017,
+    "age": 24.51809266
+  },
+  {
+    "country": "Japan",
+    "Aggregation operation": "Median",
+    "year": 2016,
+    "age": 24.60128945
+  },
+  {
+    "country": "Japan",
+    "Aggregation operation": "Median",
+    "year": 2015,
+    "age": 25.73179033
+  },
+  {
+    "country": "Japan",
+    "Aggregation operation": "Median",
+    "year": 2014,
+    "age": 25.87099
+  },
+  {
+    "country": "Japan",
+    "Aggregation operation": "Median",
+    "year": 2013,
+    "age": 26.58757851
+  },
+  {
+    "country": "Japan",
+    "Aggregation operation": "Median",
+    "year": 2012,
+    "age": 26.52354571
+  },
+  {
+    "country": "Japan",
+    "Aggregation operation": "Median",
+    "year": 2011,
+    "age": 27.39536493
+  },
+  {
+    "country": "Japan",
+    "Aggregation operation": "Median",
+    "year": 2010,
+    "age": 28.68430093
+  },
+  {
+    "country": "Japan",
+    "Aggregation operation": "Median",
+    "year": 2009,
+    "age": 28.28492393
+  },
+  {
+    "country": "Japan",
+    "Aggregation operation": "Median",
+    "year": 2008,
+    "age": 30.69439785
+  },
+  {
+    "country": "Japan",
+    "Aggregation operation": "Median",
+    "year": 2007,
+    "age": 31.7423231
+  },
+  {
+    "country": "Japan",
+    "Aggregation operation": "Median",
+    "year": 2006,
+    "age": 32.98083278
+  },
+  {
+    "country": "Japan",
+    "Aggregation operation": "Median",
+    "year": 2005,
+    "age": 32.82543889
+  },
+  {
+    "country": "South Korea",
+    "Aggregation operation": "Median",
+    "year": 2023,
+    "age": 29.3008641
+  },
+  {
+    "country": "South Korea",
+    "Aggregation operation": "Median",
+    "year": 2022,
+    "age": 31.24208428
+  },
+  {
+    "country": "South Korea",
+    "Aggregation operation": "Median",
+    "year": 2021,
+    "age": 31.06483944
+  },
+  {
+    "country": "South Korea",
+    "Aggregation operation": "Median",
+    "year": 2020,
+    "age": 31.48475223
+  },
+  {
+    "country": "South Korea",
+    "Aggregation operation": "Median",
+    "year": 2019,
+    "age": 32.48044472
+  },
+  {
+    "country": "South Korea",
+    "Aggregation operation": "Median",
+    "year": 2018,
+    "age": 34.10731095
+  },
+  {
+    "country": "South Korea",
+    "Aggregation operation": "Median",
+    "year": 2017,
+    "age": 34.61738256
+  },
+  {
+    "country": "South Korea",
+    "Aggregation operation": "Median",
+    "year": 2016,
+    "age": 36.66666667
+  },
+  {
+    "country": "South Korea",
+    "Aggregation operation": "Median",
+    "year": 2015,
+    "age": 37.17628175
+  },
+  {
+    "country": "South Korea",
+    "Aggregation operation": "Median",
+    "year": 2014,
+    "age": 36.65317614
+  },
+  {
+    "country": "South Korea",
+    "Aggregation operation": "Median",
+    "year": 2013,
+    "age": 36.59963437
+  },
+  {
+    "country": "South Korea",
+    "Aggregation operation": "Median",
+    "year": 2012,
+    "age": 36.29852997
+  },
+  {
+    "country": "South Korea",
+    "Aggregation operation": "Median",
+    "year": 2011,
+    "age": 36.5642295
+  },
+  {
+    "country": "South Korea",
+    "Aggregation operation": "Median",
+    "year": 2010,
+    "age": 39.60585734
+  },
+  {
+    "country": "South Korea",
+    "Aggregation operation": "Median",
+    "year": 2009,
+    "age": 38.6146827
+  },
+  {
+    "country": "South Korea",
+    "Aggregation operation": "Median",
+    "year": 2008,
+    "age": 39.03744173
+  },
+  {
+    "country": "South Korea",
+    "Aggregation operation": "Median",
+    "year": 2007,
+    "age": 38.16206428
+  },
+  {
+    "country": "South Korea",
+    "Aggregation operation": "Median",
+    "year": 2006,
+    "age": 39.77414431
+  },
+  {
+    "country": "South Korea",
+    "Aggregation operation": "Median",
+    "year": 2005,
+    "age": 39.61663236
+  },
+  {
+    "country": "New Zealand",
+    "Aggregation operation": "Median",
+    "year": 2023,
+    "age": 4.230317274
+  },
+  {
+    "country": "New Zealand",
+    "Aggregation operation": "Median",
+    "year": 2022,
+    "age": 6.255864873
+  },
+  {
+    "country": "New Zealand",
+    "Aggregation operation": "Median",
+    "year": 2021,
+    "age": 6.666666667
+  },
+  {
+    "country": "New Zealand",
+    "Aggregation operation": "Median",
+    "year": 2020,
+    "age": 4.581467448
+  },
+  {
+    "country": "New Zealand",
+    "Aggregation operation": "Median",
+    "year": 2019,
+    "age": 6.508450198
+  },
+  {
+    "country": "New Zealand",
+    "Aggregation operation": "Median",
+    "year": 2018,
+    "age": 7.869692533
+  },
+  {
+    "country": "New Zealand",
+    "Aggregation operation": "Median",
+    "year": 2017,
+    "age": 7.150837989
+  },
+  {
+    "country": "New Zealand",
+    "Aggregation operation": "Median",
+    "year": 2016,
+    "age": 7.769230769
+  },
+  {
+    "country": "New Zealand",
+    "Aggregation operation": "Median",
+    "year": 2015,
+    "age": 7.92
+  },
+  {
+    "country": "New Zealand",
+    "Aggregation operation": "Median",
+    "year": 2014,
+    "age": 6.083333333
+  },
+  {
+    "country": "New Zealand",
+    "Aggregation operation": "Median",
+    "year": 2013,
+    "age": 6.594323873
+  },
+  {
+    "country": "New Zealand",
+    "Aggregation operation": "Median",
+    "year": 2012,
+    "age": 5.907906169
+  },
+  {
+    "country": "New Zealand",
+    "Aggregation operation": "Median",
+    "year": 2011,
+    "age": 4.533333333
+  },
+  {
+    "country": "New Zealand",
+    "Aggregation operation": "Median",
+    "year": 2010,
+    "age": 7.011235955
+  },
+  {
+    "country": "New Zealand",
+    "Aggregation operation": "Median",
+    "year": 2009,
+    "age": 8.759124088
+  },
+  {
+    "country": "New Zealand",
+    "Aggregation operation": "Median",
+    "year": 2008,
+    "age": 8.053691275
+  },
+  {
+    "country": "New Zealand",
+    "Aggregation operation": "Median",
+    "year": 2007,
+    "age": 7.142857143
+  },
+  {
+    "country": "New Zealand",
+    "Aggregation operation": "Median",
+    "year": 2006,
+    "age": 9.333333333
+  },
+  {
+    "country": "New Zealand",
+    "Aggregation operation": "Median",
+    "year": 2005,
+    "age": 9.611111111
+  },
+  {
+    "country": "Norway",
+    "Aggregation operation": "Median",
+    "year": 2023,
+    "age": 4.520089286
+  },
+  {
+    "country": "Norway",
+    "Aggregation operation": "Median",
+    "year": 2022,
+    "age": 4.481459449
+  },
+  {
+    "country": "Norway",
+    "Aggregation operation": "Median",
+    "year": 2021,
+    "age": 4.601479047
+  },
+  {
+    "country": "Norway",
+    "Aggregation operation": "Median",
+    "year": 2020,
+    "age": 4.813863928
+  },
+  {
+    "country": "Norway",
+    "Aggregation operation": "Median",
+    "year": 2019,
+    "age": 4.36786655
+  },
+  {
+    "country": "Norway",
+    "Aggregation operation": "Median",
+    "year": 2018,
+    "age": 5.129369042
+  },
+  {
+    "country": "Norway",
+    "Aggregation operation": "Median",
+    "year": 2017,
+    "age": 5.49476135
+  },
+  {
+    "country": "Norway",
+    "Aggregation operation": "Median",
+    "year": 2016,
+    "age": 6.306306306
+  },
+  {
+    "country": "Norway",
+    "Aggregation operation": "Median",
+    "year": 2015,
+    "age": 6.957773513
+  },
+  {
+    "country": "Norway",
+    "Aggregation operation": "Median",
+    "year": 2014,
+    "age": 5.8006941
+  },
+  {
+    "country": "Norway",
+    "Aggregation operation": "Median",
+    "year": 2013,
+    "age": 6.597045339
+  },
+  {
+    "country": "Norway",
+    "Aggregation operation": "Median",
+    "year": 2012,
+    "age": 5.792118487
+  },
+  {
+    "country": "Norway",
+    "Aggregation operation": "Median",
+    "year": 2011,
+    "age": 7.144812483
+  },
+  {
+    "country": "Norway",
+    "Aggregation operation": "Median",
+    "year": 2010,
+    "age": 7.236095346
+  },
+  {
+    "country": "Norway",
+    "Aggregation operation": "Median",
+    "year": 2009,
+    "age": 8.284371328
+  },
+  {
+    "country": "Norway",
+    "Aggregation operation": "Median",
+    "year": 2008,
+    "age": 8.757575758
+  },
+  {
+    "country": "Norway",
+    "Aggregation operation": "Median",
+    "year": 2007,
+    "age": 8.789439794
+  },
+  {
+    "country": "Norway",
+    "Aggregation operation": "Median",
+    "year": 2006,
+    "age": 8.210742388
+  },
+  {
+    "country": "Norway",
+    "Aggregation operation": "Median",
+    "year": 2005,
+    "age": 8.624376336
+  },
+  {
+    "country": "United Kingdom",
+    "Aggregation operation": "Median",
+    "year": 2023,
+    "age": 13.25517241
+  },
+  {
+    "country": "United Kingdom",
+    "Aggregation operation": "Median",
+    "year": 2022,
+    "age": 13.97833724
+  },
+  {
+    "country": "United Kingdom",
+    "Aggregation operation": "Median",
+    "year": 2021,
+    "age": 14.16935608
+  },
+  {
+    "country": "United Kingdom",
+    "Aggregation operation": "Median",
+    "year": 2020,
+    "age": 11.98380567
+  },
+  {
+    "country": "United Kingdom",
+    "Aggregation operation": "Median",
+    "year": 2019,
+    "age": 16.09980928
+  },
+  {
+    "country": "United Kingdom",
+    "Aggregation operation": "Median",
+    "year": 2018,
+    "age": 16.3104242
+  },
+  {
+    "country": "United Kingdom",
+    "Aggregation operation": "Median",
+    "year": 2017,
+    "age": 16.53410053
+  },
+  {
+    "country": "United Kingdom",
+    "Aggregation operation": "Median",
+    "year": 2016,
+    "age": 16.7965368
+  },
+  {
+    "country": "United Kingdom",
+    "Aggregation operation": "Median",
+    "year": 2015,
+    "age": 17.10155148
+  },
+  {
+    "country": "United Kingdom",
+    "Aggregation operation": "Median",
+    "year": 2014,
+    "age": 17.38274257
+  },
+  {
+    "country": "United Kingdom",
+    "Aggregation operation": "Median",
+    "year": 2013,
+    "age": 17.48201439
+  },
+  {
+    "country": "United Kingdom",
+    "Aggregation operation": "Median",
+    "year": 2012,
+    "age": 17.78388278
+  },
+  {
+    "country": "United Kingdom",
+    "Aggregation operation": "Median",
+    "year": 2011,
+    "age": 18.2460052
+  },
+  {
+    "country": "United Kingdom",
+    "Aggregation operation": "Median",
+    "year": 2010,
+    "age": 19.23143692
+  },
+  {
+    "country": "United Kingdom",
+    "Aggregation operation": "Median",
+    "year": 2009,
+    "age": 20.68629595
+  },
+  {
+    "country": "United Kingdom",
+    "Aggregation operation": "Median",
+    "year": 2008,
+    "age": 21.85786911
+  },
+  {
+    "country": "United Kingdom",
+    "Aggregation operation": "Median",
+    "year": 2007,
+    "age": 21.63478071
+  },
+  {
+    "country": "United Kingdom",
+    "Aggregation operation": "Median",
+    "year": 2006,
+    "age": 21.71808402
+  },
+  {
+    "country": "United Kingdom",
+    "Aggregation operation": "Median",
+    "year": 2005,
+    "age": 22.0639582
+  },
+  {
+    "country": "United States",
+    "Aggregation operation": "Median",
+    "year": 2023,
+    "age": 16.38935108
+  },
+  {
+    "country": "United States",
+    "Aggregation operation": "Median",
+    "year": 2022,
+    "age": 16.98440208
+  },
+  {
+    "country": "United States",
+    "Aggregation operation": "Median",
+    "year": 2021,
+    "age": 16.86417502
+  },
+  {
+    "country": "United States",
+    "Aggregation operation": "Median",
+    "year": 2020,
+    "age": 17.65249538
+  },
+  {
+    "country": "United States",
+    "Aggregation operation": "Median",
+    "year": 2019,
+    "age": 18.47070507
+  },
+  {
+    "country": "United States",
+    "Aggregation operation": "Median",
+    "year": 2018,
+    "age": 18.91058582
+  },
+  {
+    "country": "United States",
+    "Aggregation operation": "Median",
+    "year": 2017,
+    "age": 18.17215728
+  },
+  {
+    "country": "United States",
+    "Aggregation operation": "Median",
+    "year": 2016,
+    "age": 18.1420765
+  },
+  {
+    "country": "United States",
+    "Aggregation operation": "Median",
+    "year": 2015,
+    "age": 18.88268156
+  },
+  {
+    "country": "United States",
+    "Aggregation operation": "Median",
+    "year": 2014,
+    "age": 17.45120551
+  },
+  {
+    "country": "United States",
+    "Aggregation operation": "Median",
+    "year": 2013,
+    "age": 17.90697674
+  },
+  {
+    "country": "United States",
+    "Aggregation operation": "Median",
+    "year": 2012,
+    "age": 19.08665105
+  },
+  {
+    "country": "United States",
+    "Aggregation operation": "Median",
+    "year": 2011,
+    "age": 17.78846154
+  },
+  {
+    "country": "United States",
+    "Aggregation operation": "Median",
+    "year": 2010,
+    "age": 18.81067961
+  },
+  {
+    "country": "United States",
+    "Aggregation operation": "Median",
+    "year": 2009,
+    "age": 19.78021978
+  },
+  {
+    "country": "United States",
+    "Aggregation operation": "Median",
+    "year": 2008,
+    "age": 20.05012531
+  },
+  {
+    "country": "United States",
+    "Aggregation operation": "Median",
+    "year": 2007,
+    "age": 19.84334204
+  },
+  {
+    "country": "United States",
+    "Aggregation operation": "Median",
+    "year": 2006,
+    "age": 19.24629879
+  },
+  {
+    "country": "United States",
+    "Aggregation operation": "Median",
+    "year": 2005,
+    "age": 18.97506925
+  }
+]

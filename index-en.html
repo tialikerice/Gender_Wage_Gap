@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D3.js 动画条形图竞赛 (显示所有国家)</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+
+    <style>
+        /* ... (保持之前的 CSS 样式不变) ... */
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            margin: 20px;
+            background-color: white;
+            color: #4a4a4a;
+        }
+
+        h1 {
+            text-align: center;
+            color: #d87093;
+            font-weight: 600;
+        }
+
+        #chart-container {
+            position: relative;
+            width: 90%;
+            max-width: 800px;
+            /* IMPORTANT: Height is now dynamic, so we might need scroll */
+            /* Consider adding max-height and overflow-y: auto; */
+            /* max-height: 80vh; */ /* Example: Limit height to 80% of viewport */
+            /* overflow-y: auto; */  /* Add scroll if content exceeds max-height */
+            margin: 20px auto;
+            background-color: #ffffff;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.0);
+            padding: 20px;
+            box-sizing: border-box;
+            border-radius: 8px;
+        }
+
+        #chart {
+            width: 100%;
+            /* Height will be set dynamically by D3 */
+        }
+
+        .bar {
+            shape-rendering: crispEdges;
+            rx: 3;
+            ry: 3;
+        }
+
+        .label-text {
+            font-size: 16px; /* Slightly smaller if many bars */
+            fill: #777777;
+            dominant-baseline: middle;
+            pointer-events: none;
+        }
+
+        .label-flag {
+            pointer-events: none;
+        }
+
+        .label-group { }
+
+        .value-label {
+            font-size: 16px; /* Slightly smaller if many bars */
+            fill: #777777;
+            font-weight: bold;
+            text-anchor: start;
+            dominant-baseline: middle;
+            pointer-events: none;
+        }
+
+        .axis path,
+        .axis line {
+            fill: none;
+            stroke: #e0e0e0;
+            shape-rendering: crispEdges;
+        }
+
+        .axis text {
+            font-size: 16px;
+            fill: #777;
+        }
+
+        .x-axis .tick line {
+            stroke: #eee;
+            stroke-opacity: 0.7;
+        }
+
+        #year-display {
+            position: absolute;
+            bottom: 30px;
+            right: 30px;
+            font-size: 3em; /* Slightly smaller if chart is very tall */
+            font-weight: bold;
+            color: #f8bbd0;
+            opacity: 0.8;
+            z-index: 0;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+    <div id="chart-container">
+        <svg id="chart"></svg>
+        <div id="year-display"></div>
+    </div>
+</br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
+</br>
+</br>
+</br>
+    <script>
+        // --- Configuration ---
+        // const N_BARS = 12; // **修改点: 不再需要 N_BARS 来限制数量**
+        const DURATION = 2000; // Animation duration (keep it reasonable for performance)
+        const MARGIN = { top: 20, right: 80, bottom: 20, left: 150 };
+        const BAR_HEIGHT = 30; // **修改点: 可能需要减小 Bar 高度以适应更多 Bar**
+        const FLAG_WIDTH = 18; // Adjust flag size if bar height changes
+        const FLAG_HEIGHT = 12; // Adjust flag size if bar height changes
+        const FLAG_TEXT_SPACING = 5;
+
+        // --- Flag URL Map ---
+        const flagUrlMap = {
+            "United States":  "https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg",
+            "China":          "https://upload.wikimedia.org/wikipedia/commons/f/fa/Flag_of_the_People%27s_Republic_of_China.svg",
+            "Japan":          "https://upload.wikimedia.org/wikipedia/en/9/9e/Flag_of_Japan.svg",
+            "Germany":        "https://upload.wikimedia.org/wikipedia/en/b/ba/Flag_of_Germany.svg",
+            "United Kingdom": "https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg",
+            "France":         "https://upload.wikimedia.org/wikipedia/en/c/c3/Flag_of_France.svg",
+            "India":          "https://upload.wikimedia.org/wikipedia/en/4/41/Flag_of_India.svg",
+            "Canada":         "https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg",
+            "South Korea":    "https://upload.wikimedia.org/wikipedia/commons/0/09/Flag_of_South_Korea.svg",
+            "Italy":          "https://upload.wikimedia.org/wikipedia/en/0/03/Flag_of_Italy.svg",
+            "Brazil":         "https://upload.wikimedia.org/wikipedia/en/0/05/Flag_of_Brazil.svg",
+            "Russia":         "https://upload.wikimedia.org/wikipedia/en/f/f3/Flag_of_Russia.svg",
+            "Australia":      "https://upload.wikimedia.org/wikipedia/commons/8/88/Flag_of_Australia_%28converted%29.svg",
+            "Spain":          "https://upload.wikimedia.org/wikipedia/en/9/9a/Flag_of_Spain.svg",
+            // --- Added Countries ---
+            "Norway":         "https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Norway.svg",
+            "New Zealand":    "https://upload.wikimedia.org/wikipedia/commons/3/3e/Flag_of_New_Zealand.svg",
+            "Denmark":        "https://upload.wikimedia.org/wikipedia/commons/9/9c/Flag_of_Denmark.svg",
+            "Iceland":        "https://upload.wikimedia.org/wikipedia/commons/c/ce/Flag_of_Iceland.svg",
+            "Argentina":      "https://upload.wikimedia.org/wikipedia/commons/1/1a/Flag_of_Argentina.svg",
+            "Portugal":       "https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_Portugal.svg"
+            // --- You can continue adding more countries here ---
+        };
+        // --- Global variables for chart elements ---
+        const container = d3.select("#chart-container");
+        const svg = d3.select("#chart");
+        const yearDisplay = d3.select("#year-display");
+        const xScale = d3.scaleLinear(); // Define scales globally or pass them
+        const yScale = d3.scaleBand().padding(0.1); // Define scales globally or pass them
+
+        let g; // Main group
+        let xAxisGroup;
+        let barsGroup;
+        let labelsGroup;
+        let valueLabelsGroup;
+        let timer;
+        let allUniqueCountries = []; // To store all unique country names
+        let containerWidth = 800; // Default width
+
+        // --- Main function to load data and setup ---
+        function initializeChart() {
+            d3.json("xinchou-en.json").then(rawData => {
+                if (!rawData || rawData.length === 0) {
+                     console.error("Data loaded from xinchou.json is empty or invalid.");
+                     container.html("<p style='color:red;'>错误: 从 xinchou.json 加载的数据为空或无效。</p>");
+                     return;
+                }
+
+                // --- Data Processing ---
+                const data = rawData.map(d => ({
+                    ...d,
+                    year: +d.year,
+                    age: +d.age,
+                    country: d.country
+                }));
+
+                // **修改点: 获取所有唯一的国家名称**
+                allUniqueCountries = Array.from(new Set(data.map(d => d.country)));
+                console.log(`Found ${allUniqueCountries.length} unique countries.`);
+
+                if (allUniqueCountries.length === 0) {
+                    console.error("No unique countries found in data.");
+                    container.html("<p style='color:red;'>错误: 数据中未找到国家名称。</p>");
+                    return;
+                }
+
+                const years = Array.from(new Set(data.map(d => d.year))).sort((a, b) => a - b); // DESC sort
+                let yearIndex = 0;
+                const dataByYear = d3.group(data, d => d.year);
+
+                // --- Setup SVG and Scales based on potentially large number of countries ---
+                setupSvgAndScales(allUniqueCountries.length); // Pass total count
+
+                // --- Color Scale ---
+                const customColors = [ /* ... (你的颜色数组) ... */
+                    '#ffccd5', '#ffb3c1', '#ff8fa3', '#ff758f', '#f7cad0', '#e2b3be',
+                    '#ca9aa8', '#aa7b8f', '#895d77', '#68415f', '#fec5bb', '#fcd5ce',
+                    '#fae0e4', '#f7d6e0', '#f2b5d4', '#e99fbb', '#d87093', '#c75d8f',
+                    '#e0b1cb', '#d29ac1', '#c484b7', '#b66eaa', '#a7589e', '#994292'
+                 ];
+                const colorScale = d3.scaleOrdinal(customColors).domain(allUniqueCountries); // Use all countries for domain
+
+                // --- Start Animation ---
+                 if (years.length > 0) {
+                    updateChart(years[0], dataByYear, colorScale); // Initial frame
+                    timer = d3.interval(() => {
+                        yearIndex++;
+                        if (yearIndex >= years.length) {
+                            timer.stop();
+                            console.log("Animation finished.");
+                        } else {
+                            updateChart(years[yearIndex], dataByYear, colorScale);
+                        }
+                    }, DURATION);
+                } else {
+                    console.error("No valid years found in the data.");
+                    container.html("<p style='color:red;'>错误: 数据中未找到有效年份。</p>");
+                }
+
+            }).catch(error => {
+                console.error("Error loading or processing data:", error);
+                container.html(`<p style='color:red;'>无法加载数据文件 "xinchou.json"。错误: ${error}</p>`);
+            });
+        }
+
+        // --- Setup SVG dimensions and scales ---
+        function setupSvgAndScales(numberOfBars) {
+             console.log(`Setting up SVG for ${numberOfBars} bars.`);
+             try {
+                containerWidth = container.node().getBoundingClientRect().width || 800;
+            } catch (e) {
+                console.warn("无法立即获取容器宽度，使用默认值。");
+            }
+
+            // **修改点: 根据总国家数计算高度**
+            const height = numberOfBars * BAR_HEIGHT + MARGIN.top + MARGIN.bottom;
+            const width = containerWidth - MARGIN.left - MARGIN.right;
+
+            svg.attr("viewBox", `0 0 ${containerWidth} ${height}`)
+               .attr("preserveAspectRatio", "xMidYMid meet");
+
+            // Update scale ranges
+            xScale.range([0, width]);
+            yScale.range([MARGIN.top, height - MARGIN.bottom]); // yScale range depends on height
+
+             // Clear previous elements if any (useful for potential resize/re-init)
+             svg.selectAll("*").remove();
+
+            // Append main group element translated by margins
+            g = svg.append("g")
+                .attr("transform", `translate(${MARGIN.left}, 0)`);
+
+            // Append axis groups
+            xAxisGroup = g.append("g")
+                .attr("class", "x-axis")
+                .attr("transform", `translate(0, ${height - MARGIN.bottom})`); // Position X axis at new bottom
+
+            // Append groups for chart elements
+            barsGroup = g.append("g").attr("class", "bars-group");
+            labelsGroup = g.append("g").attr("class", "labels-group");
+            valueLabelsGroup = g.append("g").attr("class", "value-labels-group");
+        }
+
+
+        // --- Update Function ---
+        function updateChart(year, dataByYear, colorScale) {
+            const yearData = dataByYear.get(year);
+            if (!yearData) {
+                console.warn(`No data for year: ${year}`);
+                // Decide how to handle missing year: clear chart? show message? skip?
+                // For now, let's just skip the update for this year.
+                return;
+            }
+
+            // **修改点: 对当年份所有数据排序，不 slice**
+            const rankedData = Array.from(yearData)
+                .sort((a, b) => b.age - a.age); // Sort all descending by 'age'
+
+            // Update Scales' Domains
+            const maxValue = d3.max(rankedData, d => d.age) || 10; // Use max from all current data
+            xScale.domain([0, maxValue * 1.1]);
+            // **修改点: yScale domain is now all countries for the current year, ranked**
+            yScale.domain(rankedData.map(d => d.country));
+
+            // Update X Axis
+            const xAxis = d3.axisBottom(xScale).ticks(5).tickSizeOuter(0).tickSizeInner(- (yScale.range()[1] - yScale.range()[0])).tickFormat(d => `${d}%`);
+            xAxisGroup
+                .transition().duration(DURATION).ease(d3.easeLinear)
+                .call(xAxis);
+            xAxisGroup.selectAll(".tick line").attr("stroke", "#eee").attr("stroke-opacity", 0.7); // Ensure gridlines are styled
+             xAxisGroup.select(".domain").remove(); // Remove the axis baseline
+
+
+            // --- Data Join for Bars ---
+            const bars = barsGroup.selectAll("rect.bar")
+                .data(rankedData, d => d.country);
+
+            bars.join(
+                enter => enter.append("rect")
+                    .attr("class", "bar")
+                    .attr("fill", d => colorScale(d.country))
+                    .attr("y", d => yScale(d.country)) // Initial position
+                    .attr("height", yScale.bandwidth())
+                    .attr("x", xScale(0))
+                    .attr("width", 0) // Start width 0
+                    .call(enter => enter.transition().duration(DURATION).ease(d3.easeLinear)
+                        .attr("width", d => Math.max(0, xScale(d.age) - xScale(0)))
+                        .attr("y", d => yScale(d.country)) // Ensure y position update
+                     ),
+                update => update
+                    .call(update => update.transition().duration(DURATION).ease(d3.easeLinear)
+                        .attr("fill", d => colorScale(d.country))
+                        .attr("y", d => yScale(d.country))
+                        .attr("width", d => Math.max(0, xScale(d.age) - xScale(0)))
+                     ),
+                // **修改点: 移除退出动画，直接删除元素**
+                exit => exit.remove()
+            );
+
+            // --- Data Join for Labels (Flag + Country Name) ---
+             const labels = labelsGroup.selectAll("g.label-group")
+                .data(rankedData, d => d.country);
+
+            const labelsEnter = labels.enter()
+                .append("g")
+                .attr("class", "label-group")
+                .attr("transform", d => `translate(${-MARGIN.left}, ${yScale(d.country) + yScale.bandwidth() / 2})`)
+                .attr("opacity", 0);
+
+            // --- 修改点 A: 调整 Flag 和 Text 在 Group 内的位置 ---
+            labelsEnter.append("image")
+                .attr("class", "label-flag")
+                .attr("xlink:href", d => flagUrlMap[d.country] || "")
+                 // 将 Flag 定位在文本的左边
+                .attr("x", -(FLAG_WIDTH + FLAG_TEXT_SPACING)) // Flag 的左边缘
+                .attr("y", -FLAG_HEIGHT / 2) // 垂直居中
+                .attr("width", FLAG_WIDTH)
+                .attr("height", FLAG_HEIGHT)
+                .attr("display", d => flagUrlMap[d.country] ? null : "none");
+
+                labelsEnter.append("text")
+                .attr("class", "label-text")
+                 // 将 Text 的 *结束* 位置放在 Group 原点 (x=0) 的左边一点
+                .attr("x", -FLAG_TEXT_SPACING-20) // Text 的右边缘
+                .attr("y", 0) // 垂直居中 (依靠 dominant-baseline)
+                .attr("dominant-baseline", "middle")
+                .attr("text-anchor", "end") // **重要：文本向右对齐 (末端对齐)**
+                .text(d => d.country);
+
+                labels.merge(labelsEnter)
+                .transition().duration(DURATION).ease(d3.easeLinear)
+                 // --- 修改点 B: 调整 Group 的最终水平位置 ---
+                 // 将 Group 的原点 (现在是文本的右侧) 定位在 Bar 起始位置 (x=0 in g) 的左侧一点点
+                 // 使用一个小的负值，比如 -5 或 -10
+                .attr("transform", d => `translate(-10, ${yScale(d.country) + yScale.bandwidth() / 2})`)
+                 // --- 修改点 B 结束 ---
+                .attr("opacity", 1);
+
+             // 更新时也需要确保文本和 Flag 链接正确 (以防万一)
+             labels.select(".label-text").text(d => d.country);
+             labels.select(".label-flag")
+                 .attr("xlink:href", d => flagUrlMap[d.country] || "")
+                 .attr("display", d => flagUrlMap[d.country] ? null : "none");
+
+             // **修改点: 移除退出动画，直接删除元素**
+             labels.exit().remove();
+
+
+            // --- Data Join for Value Labels ---
+            const valueLabels = valueLabelsGroup.selectAll("text.value-label")
+                 .data(rankedData, d => d.country);
+
+            valueLabels.join(
+                enter => enter.append("text")
+                     .attr("class", "value-label")
+                     .attr("y", d => yScale(d.country) + yScale.bandwidth() / 2)
+                     .attr("x", xScale(0) + 5) // Start near 0
+                     .attr("fill-opacity", 0)
+                     .text(d => d.age === 0 ? "" : `${d.age.toFixed(2)}%`) // Handle 0 case maybe
+                     .call(enter => enter.transition().duration(DURATION).ease(d3.easeLinear)
+                         .attr("fill-opacity", 1)
+                         .attr("x", d => Math.max(0, xScale(d.age)) + 5)
+                      ),
+                update => update
+                     .call(update => update.transition().duration(DURATION).ease(d3.easeLinear)
+                         .attr("y", d => yScale(d.country) + yScale.bandwidth() / 2)
+                         .attr("x", d => Math.max(0, xScale(d.age)) + 5)
+                         .tween("text", function(d) {
+                             const currentText = this.textContent.replace('%','');
+                             const currentVal = isNaN(parseFloat(currentText)) ? 0 : parseFloat(currentText);
+                             const i = d3.interpolateNumber(currentVal, d.age);
+                             // Show blank for 0 if needed
+                             return function(t) { this.textContent = d.age === 0 ? "" : `${i(t).toFixed(2)}%`; };
+                          })
+                         .attr("fill-opacity", 1)
+                      ),
+                // **修改点: 移除退出动画，直接删除元素**
+                exit => exit.remove()
+            );
+
+            // Update Year Display
+            yearDisplay.text(year);
+        } // End of updateChart function
+
+
+        // --- Start the process ---
+        document.addEventListener('DOMContentLoaded', initializeChart);
+
+    </script>
+
+</body>
+</html>
